@@ -191,7 +191,7 @@ svg {
   opacity: 0.1;
   background-image: repeating-radial-gradient(circle at 0 0, rgba(var(--fg-rgb), 0.52) 0 1px, transparent 1px 5px);
   mix-blend-mode: screen;
-  animation: grain-shift 1.6s steps(2, end) infinite;
+  
 }
 
 .theme-flash {
@@ -317,7 +317,6 @@ svg {
 .site-nav__link:hover {
   color: var(--white);
   background: rgba(var(--fg-rgb), 0.08);
-  transform: translateY(-1px);
 }
 
 .site-nav__actions {
@@ -419,7 +418,7 @@ svg {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
   display: grid;
   align-items: end;
   padding: 8.8rem var(--site-pad) 2.25rem;
@@ -904,6 +903,8 @@ svg {
   content: attr(data-index);
   color: var(--faint);
 }
+
+
 
 .section-title {
   margin: 0;

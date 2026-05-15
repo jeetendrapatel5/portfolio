@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Work", href: "#projects" },
@@ -475,48 +476,6 @@ function useGSAPMotion() {
         });
 
         // ═══════════════════════════════════════════════════════════
-        // 6. MAGNETIC BUTTON EFFECT
-        //
-        // On mousemove: calculates offset from button center,
-        //   applies 28% of that offset as x/y translation.
-        //   power2.out (duration 0.45s) → feels like the button
-        //   is attracted to the cursor.
-        // On mouseleave: elastic.out snaps back with natural spring.
-        //   1st param = amplitude, 2nd = period (lower = faster wobble).
-        //
-        // We apply to .button AND .site-nav__brand for the JP logo.
-        // ═══════════════════════════════════════════════════════════
-
-        document.querySelectorAll(".button, .site-nav__brand").forEach((btn) => {
-          const onMove = (e) => {
-            const rect = btn.getBoundingClientRect();
-            const cx = rect.left + rect.width / 2;
-            const cy = rect.top + rect.height / 2;
-            const dx = (e.clientX - cx) * 0.28;
-            const dy = (e.clientY - cy) * 0.28;
-            // overwrite:'auto' cancels in-progress tweens on same property
-            gsap.to(btn, { x: dx, y: dy, duration: 0.45, ease: "power2.out", overwrite: "auto" });
-          };
-
-          const onLeave = () => {
-            gsap.to(btn, {
-              x: 0,
-              y: 0,
-              duration: 0.75,
-              ease: "elastic.out(1, 0.42)", // spring snap-back
-              overwrite: "auto",
-            });
-          };
-
-          btn.addEventListener("mousemove", onMove);
-          btn.addEventListener("mouseleave", onLeave);
-          cleanups.push(() => {
-            btn.removeEventListener("mousemove", onMove);
-            btn.removeEventListener("mouseleave", onLeave);
-          });
-        });
-
-        // ═══════════════════════════════════════════════════════════
         // 7. PROJECT PREVIEW PARALLAX
         //
         // scrub: 1.5 → the animation lags 1.5s behind the scroll
@@ -811,10 +770,6 @@ function Hero() {
   return (
     <section className="hero" id="home" aria-label="Jeetendra Patel portfolio introduction">
       <div className="hero__inner">
-        <div className="hero__meta" aria-label="Developer metadata">
-
-        </div>
-
         <h1 className="hero__title  flex flex-col" aria-label="Jeetendra Patel">
           <span>Jeetendra</span>
           <span className="word-outline">Patel</span>
@@ -833,7 +788,7 @@ function Hero() {
               I build <strong>precise full-stack products</strong> where the interface, API, database, and system design all feel like one clean decision.
             </p>
 
-            <div>
+            <div className="flex gap-3 items-center">
               <ButtonLink href="#projects">Explore work</ButtonLink>
               <ButtonLink href="#contact" variant="ghost">
                 Start a conversation
@@ -846,7 +801,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="hero__stats">
+        <div className="hero__stats mb-20">
           {HERO_STATS.map((stat) => (
             <div className="stat" key={stat.label}>
               <span className="stat__value">{stat.value}</span>
