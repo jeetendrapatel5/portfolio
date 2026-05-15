@@ -905,7 +905,6 @@ svg {
 }
 
 
-
 .section-title {
   margin: 0;
   color: var(--white);
@@ -951,15 +950,14 @@ svg {
 
 .proof-grid {
   display: grid;
-  gap: 1px;
+  gap: 5px;
   overflow: hidden;
   margin-top: 1.25rem;
-  border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--line);
 }
 
 .proof-item {
+  border-radius: 8px;
   min-height: 8rem;
   padding: 1.25rem;
   background: var(--black);
@@ -1421,18 +1419,17 @@ svg {
 
 .method-list {
   display: grid;
-  gap: 1px;
+  gap: 5px;
   overflow: hidden;
   margin-top: 3rem;
-  border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--line);
 }
 
 .method-item {
   display: grid;
   gap: 1rem;
   min-height: 12rem;
+  border-radius: 8px;
   padding: 1.25rem;
   background: var(--black);
   transition: transform 0.45s var(--ease-out), background 0.45s var(--ease-out);
