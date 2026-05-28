@@ -21,9 +21,9 @@ export const MARQUEE_SKILLS = [
 ];
 
 export const HERO_STATS = [
-  { value: "01", label: "Product mindset" },
-  { value: "12+", label: "Core technologies" },
-  { value: "100%", label: "Full-stack ownership" },
+  { value: "3",     label: "Products shipped"  },
+  { value: "12+",   label: "Core technologies" },
+  { value: "Open",  label: "For new work"       },
 ];
 
 export const PROJECTS = [

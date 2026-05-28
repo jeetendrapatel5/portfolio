@@ -11,10 +11,12 @@ export default function Hero() {
           <span className="word-outline">Patel</span>
 
         </h1>
-        <div className="flex gap-3 text-2xl">
-          <span>Full-Stack Developer</span>
-          <span> | </span>
-          <span>Product-Minded Engineering</span>
+        <div className="hero__disciplines" aria-label="Areas of expertise">
+          <span>Full-Stack Engineering</span>
+          <span className="hero__disc-sep" aria-hidden="true">·</span>
+          <span>Product Design</span>
+          <span className="hero__disc-sep" aria-hidden="true">·</span>
+          <span>System Architecture</span>
         </div>
 
 
