@@ -22,7 +22,7 @@ export const MARQUEE_SKILLS = [
 
 export const HERO_STATS = [
   { value: "3",     label: "Products shipped"  },
-  { value: "12+",   label: "Core technologies" },
+  { value: "25+",   label: "Core technologies" },
   { value: "Open",  label: "For new work"       },
 ];
 

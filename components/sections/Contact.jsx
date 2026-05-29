@@ -15,7 +15,7 @@ export default function Contact() {
         </div>
 
         <div className="contact__actions" data-reveal style={{ "--delay": "120ms" }}>
-          <ButtonLink href="mailto:hello@jeetendrapatel.dev" variant="solid">
+          <ButtonLink href="mailto:hello@jeetendrapatel.dev" variant="outline">
             Email Jeetendra
           </ButtonLink>
           <ButtonLink href="#projects">Review work</ButtonLink>
