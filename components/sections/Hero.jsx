@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="hero__inner">
         <h1 className="hero__title flex flex-col" aria-label="Jeetendra Patel">
           <span className="relative inline-block">
-            Jeetendr<span className="relative inline-block">a<span className="absolute md:top-2 lg:top-2 left-2/2 -translate-x-0/4 lg:w-5 lg:h-5 md:w-3.5 md:h-3.5 w-3 h-3 rounded-full bg-amber-500" style={{ backgroundColor: '#FF9933' }} aria-hidden="true" /></span>
+            Jeetendr<span className="relative inline-block">a<span className="absolute md:top-2 lg:top-2 left-2/2 -translate-x-0/4 lg:w-4.5 lg:h-4.5 md:w-3.5 md:h-3.5 w-3 h-3 rounded-full bg-amber-500" style={{ backgroundColor: '#4FFF00' }} aria-hidden="true" /></span>
           </span>
           <span className="word-outline">Patel</span>
 

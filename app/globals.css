@@ -94,7 +94,6 @@ body {
   overflow-x: hidden;
   background:
     linear-gradient(to bottom, rgba(var(--fg-rgb), 0.055), transparent 16rem),
-    repeating-linear-gradient(to bottom, rgba(var(--fg-rgb), 0.035) 0 1px, transparent 1px 5rem),
     var(--black);
   color: var(--white);
   font-family: var(--font-sans);
@@ -289,17 +288,28 @@ svg {
     transform 0.55s var(--ease-out);
 }
 
+/* Desktop active link */
+.site-nav__link--active {
+  background-color: rgba(120, 120, 120, 0.15); /* light grey pill */
+  border-radius: 6px;
+}
+
+/* Mobile drawer active link */
+.nav-drawer__link--active {
+  background-color: rgba(120, 120, 120, 0.15);
+  border-radius: 6px;
+}
+
 .site-nav__brand {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 2.6rem;
   height: 2.2rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--white);
   transition: transform 0.4s var(--ease-out), background 0.4s var(--ease-out), color 0.4s var(--ease-out);
 }
@@ -856,7 +866,6 @@ svg {
 .button--solid {
   background: var(--black);
   color: var(--white);
-  border-color: var(--black);
 }
 
 .button--solid::before {

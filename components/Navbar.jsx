@@ -1,11 +1,18 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar({ links, onThemeToggle, theme }) {
   const isDark = theme === "dark";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const drawerRef = useRef(null);
+  const pathName = usePathname();
+
+  const isActive = (href) => {
+    if(!href.startsWith('/')) return false;
+    return pathName === href;
+  }
 
   /* ── scroll shadow ───────────────────────────────────── */
   useEffect(() => {
@@ -36,14 +43,15 @@ export default function Navbar({ links, onThemeToggle, theme }) {
         aria-label="Primary navigation"
       >
         {/* ── Brand ──────────────────────────────────────── */}
-        <a className="site-nav__brand" href="#home" aria-label="Jeetendra Patel home">
+        <a className="site-nav__brand" href="/" aria-label="Jeetendra Patel home">
           JP
         </a>
 
         {/* ── Desktop links ──────────────────────────────── */}
         <nav className="site-nav__links" aria-label="Portfolio sections">
           {links.map((link) => (
-            <a className="site-nav__link" href={link.href} key={link.href}>
+            
+            <a className={`site-nav__link${isActive(link.href) ? " site-nav__link--active" : ""}`} href={link.href} key={link.href}>
               {link.label}
             </a>
           ))}
@@ -126,7 +134,7 @@ export default function Navbar({ links, onThemeToggle, theme }) {
                 style={{ "--i": i }}
               >
                 <a
-                  className="nav-drawer__link"
+                  className={`nav-drawer__link${isActive(link.href) ? " nav-drawer__link--active" : ""}`}
                   href={link.href}
                   onClick={close}
                   tabIndex={open ? 0 : -1}

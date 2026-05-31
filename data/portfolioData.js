@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
-  { label: "Work", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Stack", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Stack", href: "/skills" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const MARQUEE_SKILLS = [
