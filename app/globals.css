@@ -177,10 +177,7 @@ svg {
   min-height: 100vh;
   isolation: isolate;
   overflow: hidden;
-  background:
-    linear-gradient(to right, transparent, rgba(var(--fg-rgb), 0.035), transparent),
-    var(--black);
-  transition: background 0.7s var(--ease-out), color 0.7s var(--ease-out);
+  background: var(--black);
 }
 
 .portfolio-shell::before {
@@ -196,18 +193,6 @@ svg {
   background-size: 6rem 6rem;
   mask-image: linear-gradient(to bottom, black, transparent 72%);
   animation: grid-drift 26s linear infinite;
-}
-
-.portfolio-shell::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.1;
-  background-image: repeating-radial-gradient(circle at 0 0, rgba(var(--fg-rgb), 0.52) 0 1px, transparent 1px 5px);
-  mix-blend-mode: screen;
-  
 }
 
 .theme-flash {
@@ -290,7 +275,7 @@ svg {
 
 /* Desktop active link */
 .site-nav__link--active {
-  background-color: rgba(120, 120, 120, 0.15); /* light grey pill */
+  background-color: rgba(120, 120, 120, 0.15);
   border-radius: 6px;
 }
 
@@ -1142,7 +1127,7 @@ svg {
 }
 
 .section-header {
-  max-width: 35rem;
+  max-width: 38rem;
 }
 
 .section-kicker {

@@ -39,8 +39,9 @@ export default function Portfolio() {
         <Skills />
         <Method />
         <Contact />
+        <Footer />
       </main>
-      <Footer />
+      
     </div>
   );
 }

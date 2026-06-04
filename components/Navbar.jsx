@@ -72,10 +72,6 @@ export default function Navbar({ links, onThemeToggle, theme }) {
             <span className="theme-toggle__label">{isDark ? "Dark" : "Light"}</span>
           </button>
 
-          <a className="site-nav__status" href="#contact">
-            Available
-          </a>
-
           {/* ── Hamburger (mobile only) ─────────────────── */}
           <button
             className={`nav-burger${open ? " nav-burger--open" : ""}`}
@@ -165,9 +161,6 @@ export default function Navbar({ links, onThemeToggle, theme }) {
               <span className="theme-toggle__label">{isDark ? "Dark" : "Light"}</span>
             </button>
 
-            <a className="site-nav__status nav-drawer__status" href="#contact" onClick={close} tabIndex={open ? 0 : -1}>
-              Available
-            </a>
           </div>
         </nav>
       </div>
