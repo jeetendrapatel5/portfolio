@@ -207,7 +207,7 @@ export default function ProjectsPage() {
           <div className="scroll-progress__bar" />
         </div>
 
-        <header className="section h-screen section--no-border" data-theme={theme}>
+        <header className="section section--no-border" data-theme={theme}>
           <div
             style={{
               display: "flex",

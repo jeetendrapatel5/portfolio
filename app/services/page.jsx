@@ -212,10 +212,7 @@ export default function ServicesPage() {
        * calc() reads the CSS variable at render time — works in both modes.
        * .section--no-border removes the border-top from the base .section rule.
        */}
-    <header
-        className="section section--no-border portfolio-shell"
-        style={{ paddingTop: "calc(var(--section-pad))" }}
-      >
+    <header className="section section--no-border" data-theme={theme}>
         <div
           style={{
             display: "flex",
@@ -280,8 +277,6 @@ export default function ServicesPage() {
           aria-hidden="true"
           style={{
             height: "1px",
-            marginTop: "3rem",
-            background: "var(--line)",
             transformOrigin: "left",
             transform: "scaleX(0)",
             animation: "draw-line 1.4s var(--ease-in-out) 1.8s forwards",
