@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "Technologies", href: "/technologies" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const MARQUEE_SKILLS = [
