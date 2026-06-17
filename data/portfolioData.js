@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "Technologies", href: "/technologies" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const MARQUEE_SKILLS = [
@@ -21,7 +21,6 @@ export const MARQUEE_SKILLS = [
 ];
 
 export const HERO_STATS = [
-  { value: "3",     label: "Products shipped"  },
   { value: "25+",   label: "Core technologies" },
   { value: "Open",  label: "For new work"       },
 ];
@@ -29,14 +28,14 @@ export const HERO_STATS = [
 export const PROJECTS = [
   {
     number: "01",
-    title: "Freeport",
+    title: "Opprine",
     category: "SaaS Client Portal",
     year: "2026",
     status: "Product build",
     subtitle:
       "A client delivery system that makes freelance work feel calm, transparent, and premium from the first handoff.",
     story:
-      "Freeport is shaped around trust: magic-link access, delivery milestones, decision history, invoice readiness, and clean project stories that clients can understand without a walkthrough.",
+      "Opprine is shaped around trust: magic-link access, delivery milestones, decision history, invoice readiness, and clean project stories that clients can understand without a walkthrough.",
     signals: [
       "Designed the experience around client confidence, not internal admin screens.",
       "Built the architecture for secure handoffs, project state, billing flows, and durable records.",
@@ -45,42 +44,42 @@ export const PROJECTS = [
     stack: ["Next.js", "PostgreSQL", "Prisma", "Redis", "Stripe", "Resend"],
     preview: "portal",
   },
-  {
-    number: "02",
-    title: "Architecture Lab",
-    category: "System Design Study",
-    year: "2026",
-    status: "Case study",
-    subtitle:
-      "A technical storytelling environment for designing, explaining, and stress-testing production web systems.",
-    story:
-      "The project maps product requirements into APIs, queues, cache strategy, database constraints, and failure paths so the system reads like a thoughtful engineering decision, not a pile of features.",
-    signals: [
-      "Documents the path from user journey to schema, service boundaries, and cache strategy.",
-      "Highlights tradeoffs clearly for recruiters, founders, and engineering teams.",
-      "Shows how frontend polish and backend reliability support the same business outcome.",
-    ],
-    stack: ["System Design", "Node.js", "Express.js", "Redis", "PostgreSQL"],
-    preview: "map",
-  },
-  {
-    number: "03",
-    title: "Invoiced",
-    category: "Payments Platform",
-    year: "2025",
-    status: "Shipped concept",
-    subtitle:
-      "A lightweight invoice and payment workflow for independent builders who need clarity without enterprise noise.",
-    story:
-      "Invoiced focuses on the practical details that make a tool feel reliable: clean invoice states, fast PDF generation, payment visibility, multi-currency thinking, and a UI that keeps money conversations professional.",
-    signals: [
-      "Built around real freelancer workflows: draft, send, follow up, settle, archive.",
-      "Keeps financial state legible while leaving room for Stripe Connect and automation.",
-      "Balances a minimalist interface with the operational detail users need.",
-    ],
-    stack: ["React", "Node.js", "Express.js", "Stripe", "PostgreSQL"],
-    preview: "terminal",
-  },
+  // {
+  //   number: "02",
+  //   title: "Architecture Lab",
+  //   category: "System Design Study",
+  //   year: "2026",
+  //   status: "Case study",
+  //   subtitle:
+  //     "A technical storytelling environment for designing, explaining, and stress-testing production web systems.",
+  //   story:
+  //     "The project maps product requirements into APIs, queues, cache strategy, database constraints, and failure paths so the system reads like a thoughtful engineering decision, not a pile of features.",
+  //   signals: [
+  //     "Documents the path from user journey to schema, service boundaries, and cache strategy.",
+  //     "Highlights tradeoffs clearly for recruiters, founders, and engineering teams.",
+  //     "Shows how frontend polish and backend reliability support the same business outcome.",
+  //   ],
+  //   stack: ["System Design", "Node.js", "Express.js", "Redis", "PostgreSQL"],
+  //   preview: "map",
+  // },
+  // {
+  //   number: "03",
+  //   title: "Invoiced",
+  //   category: "Payments Platform",
+  //   year: "2025",
+  //   status: "Shipped concept",
+  //   subtitle:
+  //     "A lightweight invoice and payment workflow for independent builders who need clarity without enterprise noise.",
+  //   story:
+  //     "Invoiced focuses on the practical details that make a tool feel reliable: clean invoice states, fast PDF generation, payment visibility, multi-currency thinking, and a UI that keeps money conversations professional.",
+  //   signals: [
+  //     "Built around real freelancer workflows: draft, send, follow up, settle, archive.",
+  //     "Keeps financial state legible while leaving room for Stripe Connect and automation.",
+  //     "Balances a minimalist interface with the operational detail users need.",
+  //   ],
+  //   stack: ["React", "Node.js", "Express.js", "Stripe", "PostgreSQL"],
+  //   preview: "terminal",
+  // },
 ];
 
 export const SKILL_GROUPS = [

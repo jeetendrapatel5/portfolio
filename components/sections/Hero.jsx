@@ -28,7 +28,7 @@ export default function Hero() {
 
             <div className="flex gap-3 items-center justify-center">
               <ButtonLink href="#projects">Explore work</ButtonLink>
-              <ButtonLink href="#contact" variant="ghost">
+              <ButtonLink href="/contact" variant="ghost">
                 Start a conversation
               </ButtonLink>
             </div>

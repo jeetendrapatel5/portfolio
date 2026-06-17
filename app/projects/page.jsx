@@ -9,102 +9,10 @@ import Navbar from "@/components/Navbar";
 import { NAV_LINKS } from "@/data/portfolioData";
 import ButtonLink from '@/components/ui/ButtonLink.jsx'
 import Footer from "@/components/sections/Footer";
+import PortalPreview from "@/components/project/PortalPreview";
+import MapPreview from "@/components/project/MapPreview";
+import TerminalPreview from "@/components/project/TerminalPreview";
 
-function PortalPreview() {
-  const ROWS = [
-    { label: "Design brief", pct: "82%", status: "✓" },
-    { label: "Prototype v2", pct: "61%", status: "→" },
-    { label: "Final assets", pct: "38%", status: "○" },
-  ];
-
-  return (
-    <div className="project-preview">
-      <div className="preview-window">
-        {/* Title bar: the three dots are purely decorative (CSS draws them as circles) */}
-        <div className="preview-window__bar">
-          <div className="preview-window__dots">
-            <span /><span /><span />
-          </div>
-          <span>freeport / portal</span>
-        </div>
-
-        {/* Milestone delivery rows — float-row animation staggers them */}
-        <div className="preview-flow">
-          {ROWS.map(({ label, pct, status }) => (
-            <div key={label} className="preview-row" style={{ "--meter": pct }}>
-              <span>{label}</span>
-              <div className="preview-meter" />
-              <span className="preview-status">{status}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Status chips at the bottom */}
-        <div className="preview-footer">
-          {["Milestone", "Approved", "Invoice"].map((chip) => (
-            <span key={chip} className="preview-chip">{chip}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function MapPreview() {
-  return (
-    <div className="project-preview">
-      <div className="preview-window">
-        <div className="preview-window__bar">
-          <div className="preview-window__dots">
-            <span /><span /><span />
-          </div>
-          <span>system / architecture</span>
-        </div>
-
-        <div className="preview-map">
-          {Array.from({ length: 6 }, (_, i) => (
-            <div key={i} className="preview-node">
-              <span /><span />
-            </div>
-          ))}
-        </div>
-
-        <div className="preview-footer">
-          {["Cache", "Queue", "API"].map((chip) => (
-            <span key={chip} className="preview-chip">{chip}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TerminalPreview() {
-  return (
-    <div className="project-preview">
-      <div className="preview-window">
-        <div className="preview-window__bar">
-          <div className="preview-window__dots">
-            <span /><span /><span />
-          </div>
-          <span>invoiced / cli</span>
-        </div>
-
-        <div className="preview-terminal">
-          <span>$ create-invoice --client acme --amount 4200</span>
-          <span>→ stripe: payment_intent created</span>
-          <span>✓ invoice #INV-0042 sent via email</span>
-        </div>
-
-        <div className="preview-footer">
-          {["Draft", "Sent", "Paid"].map((chip) => (
-            <span key={chip} className="preview-chip">{chip}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const PREVIEW_REGISTRY = {
   portal: PortalPreview,
@@ -125,7 +33,6 @@ function ProjectExhibit({ project, index }) {
         aria-hidden="true"
         style={{
           position: "absolute",
-          top: "-0.2em",
           right: 0,
           zIndex: 0,
           fontFamily: "var(--font-mono)",
@@ -148,7 +55,6 @@ function ProjectExhibit({ project, index }) {
       >
         <div className="project-card__meta">
           <span className="project-card__number">{project.number}</span>
-          <span aria-hidden="true">·</span>
           <span>{project.category}</span>
           <span aria-hidden="true">·</span>
           <span>{project.year}</span>
@@ -180,7 +86,7 @@ function ProjectExhibit({ project, index }) {
             marginTop: "0.75rem",
           }}
         >
-          <ButtonLink href="/" variant="outline">Open Link</ButtonLink>
+          <ButtonLink href="https://opprine.vercel.app/" variant="outline">Open Link</ButtonLink>
         </div>
       </div>
 
@@ -281,7 +187,7 @@ export default function ProjectsPage() {
 
             {/* Right: action buttons */}
             <div className="contact__actions" data-reveal style={{ "--delay": "120ms" }}>
-              <ButtonLink href="mailto:hello@jeetendra.dev" variant="outline">
+              <ButtonLink href="/contact" variant="outline">
                 Get in touch
               </ButtonLink>
               <ButtonLink href="/" variant="outline">

@@ -1,17 +1,16 @@
-export default function PortalPreview() {
+import Image from "next/image";
+
+export default function PortalPreview({ title }) {
   return (
     <div className="preview-flow" aria-hidden="true">
-      {[
-        ["brief", "signed", "72%"],
-        ["decision", "ready", "54%"],
-        ["invoice", "sent", "86%"],
-      ].map(([label, status, width]) => (
-        <div className="preview-row" key={label}>
-          <span>{label}</span>
-          <span className="preview-meter" style={{ "--meter": width }} />
-          <span className="preview-status">{status}</span>
-        </div>
-      ))}
+      <Image
+        src="/projects/opprine/hero.png"  
+        height={500}
+        width={500}                               
+        alt={`${title} project preview`}
+        className="preview-flow__image"
+        style={{ objectFit: "cover" }}   
+      />
     </div>
   );
 }

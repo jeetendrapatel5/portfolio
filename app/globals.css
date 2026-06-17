@@ -1127,7 +1127,7 @@ svg {
 }
 
 .section-header {
-  max-width: 38rem;
+  max-width: 100%;
 }
 
 .section-kicker {
@@ -1240,7 +1240,7 @@ svg {
 }
 
 .project-list {
-  display: grid;
+  display: grid;  
   margin-top: 3rem;
 }
 
@@ -1378,48 +1378,10 @@ svg {
 
 .project-preview {
   position: relative;
-  min-height: 22rem;
+  max-height: 22rem;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background:
-    linear-gradient(130deg, rgba(var(--fg-rgb), 0.11), transparent 28%),
-    rgba(var(--fg-rgb), 0.028);
-  transform:
-    perspective(1000px)
-    rotateX(var(--tilt-y, 0deg))
-    rotateY(var(--tilt-x, 0deg))
-    translateZ(0);
-  transform-style: preserve-3d;
-  transition:
-    transform 0.55s var(--ease-out),
-    border-color 0.55s var(--ease-out),
-    box-shadow 0.55s var(--ease-out);
-  will-change: transform;
 }
 
-.project-preview::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(var(--fg-rgb), 0.065) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--fg-rgb), 0.05) 1px, transparent 1px),
-    radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(var(--fg-rgb), 0.18), transparent 42%);
-  background-size: 2.25rem 2.25rem;
-  opacity: 0.38;
-  transform: translateY(0);
-  animation: preview-grid 9s linear infinite;
-}
-
-.project-preview::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 24%, rgba(var(--fg-rgb), 0.11), transparent 52%);
-  transform: translateX(-115%);
-  transition: transform 0.9s var(--ease-out);
-}
 
 .project-card:hover .project-preview::after {
   transform: translateX(115%);
@@ -1427,34 +1389,6 @@ svg {
 
 .project-card:hover .project-preview {
   border-color: rgba(var(--fg-rgb), 0.58);
-}
-
-.preview-window {
-  position: absolute;
-  inset: 1rem;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.38);
-  backdrop-filter: blur(10px);
-}
-
-.preview-window__bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--quiet);
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-}
-
-.preview-window__dots {
-  display: flex;
-  gap: 0.35rem;
 }
 
 .preview-window__dots span {
@@ -1468,6 +1402,12 @@ svg {
   display: grid;
   gap: 0.72rem;
   align-content: center;
+}
+
+.preview-flow__image {
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: top center; /* ← show the top of the page, not the middle */
 }
 
 .preview-row {
@@ -1582,12 +1522,6 @@ svg {
 
 .preview-terminal span:nth-child(3) {
   animation-delay: 1.2s;
-}
-
-.preview-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
 }
 
 .preview-chip {
