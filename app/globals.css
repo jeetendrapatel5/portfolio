@@ -122,6 +122,55 @@ body {
   user-select: none;
 }
 
+.hero__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;      
+}
+
+.hero__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted, currentColor);
+  transition: color 0.25s ease, opacity 0.25s ease;
+  padding: 0.5rem;
+  margin: -0.5rem;
+}
+
+.hero__social-link:hover,
+.hero__social-link:focus-visible {
+  color: var(--color-text, currentColor);   
+  opacity: 1;
+}
+
+.hero__social-link:focus-visible {
+  outline: 2px solid var(--color-text, currentColor);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.hero__social-icon {
+  display: block;
+  width: 1.25rem; 
+  height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .hero__social-icon {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+
+.hero__social-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -775,9 +824,6 @@ svg {
   font-size: 1.08rem;
   font-weight: 300;
   line-height: 1.75;
-  /* Initial state. GSAP animates opacity 0 → 1, y 16 → 0 */
-  opacity: 0;
-  transform: translateY(1rem);
 }
 
 .hero__copy strong {

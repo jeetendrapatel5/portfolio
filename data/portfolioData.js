@@ -21,8 +21,26 @@ export const MARQUEE_SKILLS = [
 ];
 
 export const HERO_STATS = [
-  { value: "25+",   label: "Core technologies" },
-  { value: "Open",  label: "For new work"       },
+  { value: "25+", label: "Core technologies" },
+  { value: "Open", label: "For new work" },
+];
+
+export const HERO_SOCIALS = [
+  {
+    label: "X",
+    href: "https://x.com/jeetendragp",
+    platform: "x",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/yourhandle",
+    platform: "linkedin",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/jeetendrapatel5",
+    platform: "github",
+  },
 ];
 
 export const PROJECTS = [
@@ -218,14 +236,14 @@ export const TECHNOLOGIES = [
     kicker: "01",
     headline: "What the user sees, touches, and feels.",
     items: [
-      { name: "Next.js",      level: "Core",       years: "2+ yrs", note: "App Router, RSC, server actions, middleware, ISR, streaming." },
-      { name: "React",        level: "Core",       years: "3+ yrs", note: "Hooks, context, compound patterns, performance profiling." },
-      { name: "TypeScript",   level: "Proficient", years: "2+ yrs", note: "Strict mode, Zod schemas, type-safe API contracts." },
-      { name: "JavaScript",   level: "Core",       years: "3+ yrs", note: "ES2024+, async/await, closures, event loop, modules." },
-      { name: "CSS",          level: "Core",       years: "3+ yrs", note: "Custom properties, grid, keyframes, dark mode systems." },
-      { name: "Tailwind CSS", level: "Core",       years: "2+ yrs", note: "JIT, design token systems, responsive utility patterns." },
-      { name: "GSAP",         level: "Proficient", years: "1+ yrs", note: "ScrollTrigger, entrance timelines, motion systems." },
-      { name: "Shadcn UI",    level: "Proficient", years: "1+ yrs", note: "Component library, theming, accessible primitives." },
+      { name: "Next.js", level: "Core", years: "2+ yrs", note: "App Router, RSC, server actions, middleware, ISR, streaming." },
+      { name: "React", level: "Core", years: "3+ yrs", note: "Hooks, context, compound patterns, performance profiling." },
+      { name: "TypeScript", level: "Proficient", years: "2+ yrs", note: "Strict mode, Zod schemas, type-safe API contracts." },
+      { name: "JavaScript", level: "Core", years: "3+ yrs", note: "ES2024+, async/await, closures, event loop, modules." },
+      { name: "CSS", level: "Core", years: "3+ yrs", note: "Custom properties, grid, keyframes, dark mode systems." },
+      { name: "Tailwind CSS", level: "Core", years: "2+ yrs", note: "JIT, design token systems, responsive utility patterns." },
+      { name: "GSAP", level: "Proficient", years: "1+ yrs", note: "ScrollTrigger, entrance timelines, motion systems." },
+      { name: "Shadcn UI", level: "Proficient", years: "1+ yrs", note: "Component library, theming, accessible primitives." },
     ],
   },
   {
@@ -233,12 +251,12 @@ export const TECHNOLOGIES = [
     kicker: "02",
     headline: "The engine running beneath the interface.",
     items: [
-      { name: "Node.js",        level: "Core",       years: "2+ yrs", note: "Event loop, streams, module system, performance." },
-      { name: "Express.js",     level: "Core",       years: "2+ yrs", note: "REST APIs, middleware chains, structured error handling." },
-      { name: "REST APIs",      level: "Core",       years: "3+ yrs", note: "Contract design, versioning, idempotency, rate limiting." },
+      { name: "Node.js", level: "Core", years: "2+ yrs", note: "Event loop, streams, module system, performance." },
+      { name: "Express.js", level: "Core", years: "2+ yrs", note: "REST APIs, middleware chains, structured error handling." },
+      { name: "REST APIs", level: "Core", years: "3+ yrs", note: "Contract design, versioning, idempotency, rate limiting." },
       { name: "Authentication", level: "Proficient", years: "2+ yrs", note: "JWT, sessions, magic-link, OAuth, token rotation." },
-      { name: "Redis",          level: "Proficient", years: "1+ yrs", note: "Cache layer, TTL strategy, pub/sub, rate limiting." },
-      { name: "BullMQ",         level: "Familiar",   years: "1+ yrs", note: "Background job queues, retries, concurrency." },
+      { name: "Redis", level: "Proficient", years: "1+ yrs", note: "Cache layer, TTL strategy, pub/sub, rate limiting." },
+      { name: "BullMQ", level: "Familiar", years: "1+ yrs", note: "Background job queues, retries, concurrency." },
     ],
   },
   {
@@ -246,10 +264,10 @@ export const TECHNOLOGIES = [
     kicker: "03",
     headline: "Decisions that cost the most to undo.",
     items: [
-      { name: "PostgreSQL",    level: "Core",       years: "2+ yrs", note: "Schema design, indexes, joins, constraints, migrations." },
-      { name: "Prisma ORM",    level: "Core",       years: "2+ yrs", note: "Schema-first workflow, type-safe queries, relations." },
+      { name: "PostgreSQL", level: "Core", years: "2+ yrs", note: "Schema design, indexes, joins, constraints, migrations." },
+      { name: "Prisma ORM", level: "Core", years: "2+ yrs", note: "Schema-first workflow, type-safe queries, relations." },
       { name: "Schema Design", level: "Proficient", years: "2+ yrs", note: "Normalisation, multi-tenancy patterns, soft deletes." },
-      { name: "Query Perf.",   level: "Proficient", years: "1+ yrs", note: "EXPLAIN ANALYSE, N+1 elimination, selective loading." },
+      { name: "Query Perf.", level: "Proficient", years: "1+ yrs", note: "EXPLAIN ANALYSE, N+1 elimination, selective loading." },
     ],
   },
   {
@@ -257,14 +275,13 @@ export const TECHNOLOGIES = [
     kicker: "04",
     headline: "The craft layer that ships and sustains.",
     items: [
-      { name: "Stripe",         level: "Proficient", years: "1+ yrs", note: "Subscriptions, one-off payments, webhooks, idempotency." },
-      { name: "Resend",         level: "Proficient", years: "1+ yrs", note: "Transactional email, React Email templates, deliverability." },
-      { name: "Cloudinary",     level: "Familiar",   years: "1+ yrs", note: "Image upload, on-the-fly transforms, CDN delivery." },
-      { name: "Vercel",         level: "Core",       years: "2+ yrs", note: "Deployment pipelines, preview envs, edge config." },
-      { name: "Git",            level: "Core",       years: "3+ yrs", note: "Branching strategy, conventional commits, PR workflow." },
-      { name: "System Design",  level: "Proficient", years: "2+ yrs", note: "Service maps, data flow diagrams, failure mode analysis." },
-      { name: "HTML",           level: "Core",       years: "3+ yrs", note: "Semantic markup, ARIA, accessibility, SEO structure." },
+      { name: "Stripe", level: "Proficient", years: "1+ yrs", note: "Subscriptions, one-off payments, webhooks, idempotency." },
+      { name: "Resend", level: "Proficient", years: "1+ yrs", note: "Transactional email, React Email templates, deliverability." },
+      { name: "Cloudinary", level: "Familiar", years: "1+ yrs", note: "Image upload, on-the-fly transforms, CDN delivery." },
+      { name: "Vercel", level: "Core", years: "2+ yrs", note: "Deployment pipelines, preview envs, edge config." },
+      { name: "Git", level: "Core", years: "3+ yrs", note: "Branching strategy, conventional commits, PR workflow." },
+      { name: "System Design", level: "Proficient", years: "2+ yrs", note: "Service maps, data flow diagrams, failure mode analysis." },
+      { name: "HTML", level: "Core", years: "3+ yrs", note: "Semantic markup, ARIA, accessibility, SEO structure." },
     ],
   },
 ];
- 

@@ -146,7 +146,7 @@ export default function useGSAPMotion() {
           )
 
           // Copy paragraph
-          .to(".hero__copy", { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, "-=0.55")
+          .to(".hero__copy", { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, "-=0.55")
 
           // CTA buttons — slight stagger so they don't feel like one blob
           .to(
